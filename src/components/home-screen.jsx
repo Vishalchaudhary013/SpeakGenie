@@ -188,7 +188,7 @@ export default function HomeScreen({ onNavigateToAudioPlayer, onNavigateToQuizCr
         </div>
         <div className="flex gap-4 overflow-x-auto pb-2 scrollbar-hide">
           {practiceHumans.map((item) => (
-            <Card key={item.id} className="flex-shrink-0 w-56 h-64 border-0 shadow-md overflow-hidden relative z-0">
+            <Card key={item.id} className="flex-shrink-0 w-78 h-48 border-0 shadow-md overflow-hidden relative z-0">
               <img
                 src={item.image || '/placeholder.svg'}
                 alt={item.title}
