@@ -65,7 +65,7 @@ const practiceAI = [
 export default function HomeScreen({ onNavigateToAudioPlayer, onNavigateToQuizCreator, onNavigateToVideoLearning }) {
   return (
     <div className="pb-20">
-      <div className="bg-gradient-to-br from-emerald-400 to-emerald-500 p-6 rounded-b-3xl shadow-lg">
+      <div className="sticky top-0 z-50 bg-gradient-to-br from-emerald-400 to-emerald-500 p-6 rounded-b-3xl shadow-lg">
         <div className="flex items-start justify-between mb-6">
           <div className="flex items-center gap-3">
             <Avatar className="h-12 w-12 bg-pink-400">
@@ -188,7 +188,7 @@ export default function HomeScreen({ onNavigateToAudioPlayer, onNavigateToQuizCr
         </div>
         <div className="flex gap-4 overflow-x-auto pb-2 scrollbar-hide">
           {practiceHumans.map((item) => (
-            <Card key={item.id} className="flex-shrink-0 w-56 h-64 border-0 shadow-md overflow-hidden relative">
+            <Card key={item.id} className="flex-shrink-0 w-56 h-64 border-0 shadow-md overflow-hidden relative z-0">
               <img
                 src={item.image || '/placeholder.svg'}
                 alt={item.title}
@@ -196,11 +196,11 @@ export default function HomeScreen({ onNavigateToAudioPlayer, onNavigateToQuizCr
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
               {item.badge && (
-                <div className="absolute top-2 right-2 bg-emerald-500 text-white text-xs font-bold px-2 py-1 rounded-full z-10">
+                <div className="absolute top-2 right-2 bg-emerald-500 text-white text-xs font-bold px-2 py-1 rounded-full">
                   {item.badge}
                 </div>
               )}
-              <div className="relative h-full flex flex-col justify-end p-4 space-y-2 z-10">
+              <div className="relative h-full flex flex-col justify-end p-4 space-y-2">
                 <h3 className="text-white font-semibold leading-tight drop-shadow-lg">{item.title}</h3>
                 <p className="text-sm text-white/90 drop-shadow-md">{item.subtitle}</p>
                 <Button className="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-full">
@@ -241,7 +241,7 @@ export default function HomeScreen({ onNavigateToAudioPlayer, onNavigateToQuizCr
         </div>
       </div>
 
-      <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 px-6 py-3 shadow-lg">
+      <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 px-6 py-3 shadow-lg z-40">
         <div className="flex items-center justify-around max-w-md mx-auto">
           <button className="flex flex-col items-center gap-1">
             <div className="h-10 w-10 rounded-full bg-emerald-500 flex items-center justify-center">
