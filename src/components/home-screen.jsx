@@ -65,7 +65,7 @@ const practiceAI = [
 export default function HomeScreen({ onNavigateToAudioPlayer, onNavigateToQuizCreator, onNavigateToVideoLearning }) {
   return (
     <div className="pb-20">
-      <div className="sticky top-0 z-50 bg-gradient-to-br from-emerald-400 to-emerald-500 p-6 rounded-b-3xl shadow-lg">
+      <div className=" z-50 bg-gradient-to-br from-emerald-400 to-emerald-500 p-6 rounded-b-3xl shadow-lg">
         <div className="flex items-start justify-between mb-6">
           <div className="flex items-center gap-3">
             <Avatar className="h-12 w-12 bg-pink-400">
